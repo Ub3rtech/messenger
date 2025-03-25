@@ -1,0 +1,87 @@
+{% extends 'baza.html' %}
+
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block body %}
+
+<div class="about-container">
+    <h1 class="about-title">About Us</h1>
+    <p class="about-text">
+        Welcome to our project! We are a team of passionate developers dedicated to creating innovative and secure communication solutions.
+    </p>
+
+    <p class="about-text">
+        Our mission is to provide **private, encrypted, and user-friendly messaging services**, ensuring that your conversations remain confidential.
+    </p>
+
+    <p class="about-text">
+        If you have any questions or suggestions, feel free to <a href="/contact">contact us</a>.
+        We appreciate your support! 🚀
+    </p>
+</div>
+
+{% endblock %}
+
+{% block style %}
+<style>
+    body {
+        background-color: #181818;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .about-container {
+        max-width: 600px;
+        padding: 30px;
+        background: rgba(34, 34, 34, 0.9);
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        color: #ddd;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .about-text a {
+        color: #4CAF50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .about-text a:hover {
+        color: #fff;
+    }
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+{% endblock %}
