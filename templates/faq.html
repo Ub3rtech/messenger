@@ -1,0 +1,145 @@
+{% extends 'baza.html' %}
+
+{% block title %}
+    FAQ
+{% endblock %}
+
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #181818;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        .faq-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .accordion-button {
+            background-color: #333;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 15px 20px;
+            border: none;
+            text-align: left;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #555;
+            color: #fff;
+        }
+
+
+        .accordion-button::after {
+            display: none;
+        }
+
+        .accordion-body {
+            background-color: rgba(40, 40, 40, 0.8);
+            color: #ddd;
+            padding: 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .accordion-collapse {
+            background: rgba(40, 40, 40, 0.8);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        body::before {
+            height: 700px;
+        }
+        .page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.faq-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+    </style>
+</head>
+<body>
+
+<div class="page-center">
+    <div class="faq-container">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        <div class="accordion" id="faqAccordion">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                    ❓ How do I generate my token?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Click "Get Token", enter your username, and receive a unique token.
+                </div>
+            </div>
+        </div>
+
+        <h1></h1>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    🔒 Is my chat secure?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! All messages are encrypted by RSA.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    📩 Can I delete my messages?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Messages are deleted when you close the chat or enter special button.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+{% endblock %}
+
